@@ -4,7 +4,7 @@ import '../public_activities.model.aml' {
 
 Dataset activitiesne {
   label: 'Activitiesne'
-  description: "12"
+  description: "12345"
   data_source_name: 'development'
   models: [
     model__public_activities
@@ -13,4 +13,3 @@ Dataset activitiesne {
   ]
   owner: 'admin@domain.com'
 }
- 
