@@ -35,13 +35,13 @@ Model public_users {
   }
   dimension last_visited_node {
     label: 'Last Visited Node'
-    type: 'composite'
+    type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.last_visited_node }};;
   }
   dimension nux {
     label: 'Nux'
-    type: 'composite'
+    type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.nux }};;
   }
