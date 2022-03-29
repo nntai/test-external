@@ -17,7 +17,7 @@ Model public_tenants {
   }
   dimension settings {
     label: 'Settings'
-    type: 'composite'
+    type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.settings }};;
   }

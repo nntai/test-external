@@ -59,7 +59,7 @@ Model public_users {
   }
   dimension settings {
     label: 'Settings'
-    type: 'composite'
+    type: 'text'
     hidden: false
     definition: @sql {{ #SOURCE.settings }};;
   }
