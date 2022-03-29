@@ -1,0 +1,57 @@
+Model public_personal_items {
+  type: 'table'
+  label: 'Personal Items'
+  description: ''
+  data_source_name: 'development'
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension category_id {
+    label: 'Category Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.category_id }};;
+  }
+  dimension item_type {
+    label: 'Item Type'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.item_type }};;
+  }
+  dimension item_id {
+    label: 'Item Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.item_id }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."personal_items"'
+}
