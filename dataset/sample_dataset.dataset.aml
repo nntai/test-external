@@ -25,6 +25,6 @@ Dataset sample_dataset {
     model__public_tenants,
     model__public_users
   ]
-  relationships: [relationship(model__public_users.tenant_id > model__public_tenants.id, true), relationship(model__public_query_reports.owner_id > model__public_users.id, true), relationship(model__public_query_reports.category_id > model__public_report_categories.id, false), relationship(model__public_personal_items.owner_id > model__public_users.id, true)]
+  relationships: [relationship(model__public_users.tenant_id > model__public_tenants.id, true), relationship(model__public_query_reports.owner_id > model__public_users.id, false), relationship(model__public_query_reports.category_id > model__public_report_categories.id, true), relationship(model__public_personal_items.owner_id > model__public_users.id, true)]
   owner: 'admin@domain.com'
 }
