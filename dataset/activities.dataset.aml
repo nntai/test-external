@@ -1,4 +1,4 @@
-import '../public_activities.model.aml' {
+import '../acti2.model.aml' {
   public_activities as model__public_activities
 }
 
