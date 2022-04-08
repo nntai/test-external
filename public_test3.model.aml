@@ -1,0 +1,15 @@
+Model public_test3 {
+  type: 'table'
+  label: 'Test3'
+  description: ''
+  data_source_name: 'development'
+  dimension username {
+    label: 'Username'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.username }};;
+  }
+
+  owner: 'admin@domain.com'
+  table_name: '"public"."test3"'
+}

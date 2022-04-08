@@ -1,7 +1,7 @@
 Model public_personal_items {
   type: 'table'
   label: 'Personal Items'
-  description: ''
+  description: "sdfsdfsdfsdf"
   data_source_name: 'development'
   dimension updated_at {
     label: 'Updated At'
@@ -53,5 +53,5 @@ Model public_personal_items {
   }
 
   owner: 'admin@domain.com'
-  table_name: '"public"."personal_items"'
+  table_name: '\"public\".\"personal_items\"'
 }

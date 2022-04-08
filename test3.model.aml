@@ -1,0 +1,17 @@
+Model test3 {
+  type: 'query'
+  label: 'Test3'
+  description: ''
+  data_source_name: 'development'
+  dimension username {
+    label: 'Username'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.username }};;
+  }
+
+  owner: 'admin@domain.com'
+  query: @sql select * from public.test3;;
+  models: [
+  ]
+}
