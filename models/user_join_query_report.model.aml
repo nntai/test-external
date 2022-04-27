@@ -1,0 +1,307 @@
+import './public_users.model.aml' {
+  public_users as model__public_users
+}
+import './public_query_reports.model.aml' {
+  public_query_reports as model__public_query_reports
+}
+
+Model user_join_query_report {
+  type: 'query'
+  label: 'User Join Query Report'
+  description: ''
+  data_source_name: 'development'
+  dimension last_sign_in_ip {
+    label: 'Last Sign In Ip'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.last_sign_in_ip }};;
+  }
+  dimension created_at {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension session_token {
+    label: 'Session Token'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.session_token }};;
+  }
+  dimension enable_export_data {
+    label: 'Enable Export Data'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.enable_export_data }};;
+  }
+  dimension title {
+    label: 'Title'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension last_visited_node {
+    label: 'Last Visited Node'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.last_visited_node }};;
+  }
+  dimension nux {
+    label: 'Nux'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.nux }};;
+  }
+  dimension invitation_status {
+    label: 'Invitation Status'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.invitation_status }};;
+  }
+  dimension deleted_at {
+    label: 'Deleted At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.deleted_at }};;
+  }
+  dimension settings {
+    label: 'Settings'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.settings }};;
+  }
+  dimension uid {
+    label: 'Uid'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.uid }};;
+  }
+  dimension provider {
+    label: 'Provider'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.provider }};;
+  }
+  dimension authentication_token {
+    label: 'Authentication Token'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.authentication_token }};;
+  }
+  dimension tenant_id {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension updated_at {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension role {
+    label: 'Role'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.role }};;
+  }
+  dimension foreign_id {
+    label: 'Foreign Id'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.foreign_id }};;
+  }
+  dimension encrypted_password {
+    label: 'Encrypted Password'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.encrypted_password }};;
+  }
+  dimension reset_password_token {
+    label: 'Reset Password Token'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.reset_password_token }};;
+  }
+  dimension reset_password_sent_at {
+    label: 'Reset Password Sent At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.reset_password_sent_at }};;
+  }
+  dimension remember_created_at {
+    label: 'Remember Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.remember_created_at }};;
+  }
+  dimension sign_in_count {
+    label: 'Sign In Count'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.sign_in_count }};;
+  }
+  dimension current_sign_in_at {
+    label: 'Current Sign In At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.current_sign_in_at }};;
+  }
+  dimension last_sign_in_at {
+    label: 'Last Sign In At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.last_sign_in_at }};;
+  }
+  dimension current_sign_in_ip {
+    label: 'Current Sign In Ip'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.current_sign_in_ip }};;
+  }
+  dimension id {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension allow_authentication_token {
+    label: 'Allow Authentication Token'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.allow_authentication_token }};;
+  }
+  dimension name {
+    label: 'Name'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.name }};;
+  }
+  dimension email {
+    label: 'Email'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.email }};;
+  }
+  dimension settings_1 {
+    label: 'Settings'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.settings }};;
+  }
+  dimension position {
+    label: 'Position'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.position }};;
+  }
+  dimension category_id {
+    label: 'Category Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.category_id }};;
+  }
+  dimension id_1 {
+    label: 'Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.id }};;
+  }
+  dimension title_1 {
+    label: 'Title'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.title }};;
+  }
+  dimension query {
+    label: 'Query'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.query }};;
+  }
+  dimension tenant_id_1 {
+    label: 'Tenant Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.tenant_id }};;
+  }
+  dimension data_source_id {
+    label: 'Data Source Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_source_id }};;
+  }
+  dimension description {
+    label: 'Description'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.description }};;
+  }
+  dimension created_at_1 {
+    label: 'Created At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.created_at }};;
+  }
+  dimension updated_at_1 {
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
+    definition: @sql {{ #SOURCE.updated_at }};;
+  }
+  dimension project_id {
+    label: 'Project Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.project_id }};;
+  }
+  dimension non_select_query {
+    label: 'Non Select Query'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.non_select_query }};;
+  }
+  dimension data_set_id {
+    label: 'Data Set Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.data_set_id }};;
+  }
+  dimension root_model_id {
+    label: 'Root Model Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.root_model_id }};;
+  }
+  dimension is_adhoc {
+    label: 'Is Adhoc'
+    type: 'truefalse'
+    hidden: false
+    definition: @sql {{ #SOURCE.is_adhoc }};;
+  }
+  dimension viz {
+    label: 'Viz'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.viz }};;
+  }
+  dimension owner_id {
+    label: 'Owner Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.owner_id }};;
+  }
+
+  owner: 'admin@domain.com'
+  query: @sql
+    select
+      *
+    from
+      {{ #public_users as u }}
+      left join {{ #public_query_reports as qr }} on u.id = qr.owner_id;;
+  models: [
+    model__public_users,
+    model__public_query_reports
+  ]
+}

@@ -1,0 +1,54 @@
+Model test_plain {
+  type: 'query'
+  label: 'Test Plain'
+  description: ''
+  data_source_name: 'development'
+  dimension from_curr {
+    label: 'From Curr'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.from_curr }};;
+  }
+  dimension to_curr {
+    label: 'To Curr'
+    type: 'text'
+    hidden: false
+    definition: @sql {{ #SOURCE.to_curr }};;
+  }
+  dimension value {
+    label: 'Value'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.value }};;
+  }
+
+  owner: 'admin@domain.com'
+  query: @sql
+    select 'USD' as from_curr, 'USD' as to_curr, cast(1 as float) as value from public.users
+    union all
+    select 'SGD' as from_curr, 'USD' as to_curr, cast(0.742082 as float) as value from public.users
+    union all
+    select 'IDR' as from_curr, 'USD' as to_curr, cast(0.0000699558 as float) as value from public.users
+    union all
+    select 'EUR' as from_curr, 'USD' as to_curr, cast(1.15875 as float) as value from public.users
+    union all
+    select 'MYR' as from_curr, 'USD' as to_curr, cast(0.240674 as float) as value from public.users
+    union all
+    select 'PHP' as from_curr, 'USD' as to_curr, cast(0.01992985 as float) as value from public.users
+    union all
+    select 'INR' as from_curr, 'USD' as to_curr, cast(0.01352937 as float) as value from public.users
+    union all
+    select 'GBP' as from_curr, 'USD' as to_curr, cast(1.356 as float) as value from public.users
+    union all
+    select 'VND' as from_curr, 'USD' as to_curr, cast(0.0000441965 as float) as value from public.users
+    union all 
+    select 'TWD' as from_curr, 'USD' as to_curr, cast(0.03595093 as float) as value from public.users
+    union all
+    select 'HKD' as from_curr, 'USD' as to_curr, cast(0.1283903 as float) as value from public.users
+    union all
+    select 'CNY' as from_curr, 'USD' as to_curr, cast(0.1564288 as float) as value from public.users
+    union all
+    select 'BBD' as from_curr, 'USD' as to_curr, cast(0.495825 as float) as value from public.users;;
+  models: [
+  ]
+}

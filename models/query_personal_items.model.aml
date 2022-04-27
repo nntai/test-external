@@ -1,13 +1,17 @@
-Model public_personal_items {
-  type: 'table'
-  label: "smeti lanosrep"
-  description: "sdfsdfsdfsdf"
+import './public_personal_items.model.aml' {
+  public_personal_items as model__public_personal_items
+}
+
+Model query_personal_items {
+  type: 'query'
+  label: 'Query Personal Items'
+  description: ''
   data_source_name: 'development'
   dimension updated_at {
-    label: "Updated At long label long label Updated At long label long label"
-    type: "datetime"
+    label: 'Updated At'
+    type: 'datetime'
+    hidden: false
     definition: @sql {{ #SOURCE.updated_at }};;
-    description: "lorem ipsum dola is long desc lorem ipsum dola is long desc lorem ipsum dola is long desc lorem ipsum dola is long desc lorem ipsum dola is long desc lorem ipsum dola is long desc"
   }
   dimension id {
     label: 'Id'
@@ -52,16 +56,15 @@ Model public_personal_items {
     definition: @sql {{ #SOURCE.owner_id }};;
   }
   dimension round_id {
-    label: "Round Id"
-    type: "text"
-    definition: @sql ROUND({{ id }});;
+    label: 'Round Id'
+    type: 'number'
+    hidden: false
+    definition: @sql {{ #SOURCE.round_id }};;
   }
 
   owner: 'admin@domain.com'
-  table_name: '\"public\".\"personal_items\"'
-  measure count_id {
-    label: "Count Id"
-    type: "number"
-    definition: @sql COUNT({{ id }});;
-  }
+  query: @sql select * from {{ #public_personal_items }};;
+  models: [
+    model__public_personal_items
+  ]
 }
