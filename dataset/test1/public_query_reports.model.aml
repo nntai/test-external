@@ -1,7 +1,7 @@
 Model public_query_reports {
   type: 'table'
   label: 'Query Reports'
-  description: ''
+  description: '123'
   data_source_name: 'development'
   dimension settings {
     label: 'Settings'

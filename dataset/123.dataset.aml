@@ -1,6 +1,10 @@
+import '../public_activities.model.aml' {
+  public_activities as model__public_activities
+}
+
 Dataset activitiesne {
   label: 'Activitiesne'
-  description: "131"
+  description: "12345"
   data_source_name: 'development'
   models: [
     model__public_activities

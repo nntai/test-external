@@ -1,18 +1,13 @@
-import './models/public_personal_items.model.aml' {
-  public_personal_items as model__public_personal_items
-}
-import './models/public_query_reports.model.aml' {
-  public_query_reports as model__public_query_reports
-}
-
 Dataset test {
   label: 'test'
   description: ''
   data_source_name: 'development'
   models: [
-    model__public_personal_items,
-    model__public_query_reports
+    public_personal_items,
+    public_query_reports
   ]
-  relationships: [relationship(model__public_personal_items.category_id > model__public_query_reports.category_id, true)]
+  relationships: [
+    relationship(public_personal_items.category_id > public_query_reports.category_id, true)
+  ]
   owner: 'admin@domain.com'
 }
