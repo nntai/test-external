@@ -1,7 +1,7 @@
 Model public_users {
   type: 'table'
   label: 'Users'
-  description: ''
+  description: "test"
   data_source_name: 'development'
   dimension last_sign_in_ip {
     label: 'Last Sign In Ip'
