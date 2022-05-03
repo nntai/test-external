@@ -1,13 +1,9 @@
-import '../public_activities.model.aml' {
-  public_activities as model__public_activities
-}
-
-Dataset activitiesne {
+Dataset activitiesne123 {
   label: 'Activitiesne'
   description: "12345"
   data_source_name: 'development'
   models: [
-    model__public_activities
+    public_activities
   ]
   relationships: [
   ]
