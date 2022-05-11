@@ -1,8 +1,8 @@
-import '../public_activities.model.aml' {
-  public_activities as model__public_activities
+import '../public_test3.model.aml' {
+  public_test3 as model__public_activities
 }
 
-Dataset activitiesne {
+Dataset active_test {
   label: 'Activitiesne'
   description: "131"
   data_source_name: 'development'
