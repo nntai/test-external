@@ -16,7 +16,7 @@ import '../models/public_users.model.aml' {
 
 Dataset sample_dataset {
   label: 'Sample Dataset'
-  description: "test1"
+  description: 'test1'
   data_source_name: 'development'
   models: [
     model__public_personal_items,
